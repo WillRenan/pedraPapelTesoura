@@ -85,6 +85,9 @@ main {
   margin: 0 auto;
   text-align: center;
 }
+.btn button:hover {
+  filter: brightness(0.9);
+}
 .btn button[name="addName"] {
   background-color: #60b99b;
 }
@@ -100,4 +103,5 @@ main {
   padding: 0 16px;
   margin-right: 16px;
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.4);
+  transition: 0.2s;
 }
