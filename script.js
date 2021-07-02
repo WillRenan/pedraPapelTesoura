@@ -16,6 +16,7 @@ function resetPlayerPoints(){ //resetar pontuação
 
   spanPlayerOnePoint.innerHTML = playerOnePoints;
   spanPlayerPcPoint.innerHTML = playerPcPoints;
+  removeStyleRoundWinner();
 
   for (let i = 0; i < playerOne.length; i++) {
     playerOne[i].style.opacity = 0.3;
@@ -36,6 +37,11 @@ function addNamePlayerOne(){ //adicionando nome do player 1
   let namePlayer = prompt('Digite seu nome.');
   let namePlayerOne =  document.querySelector('.player-options p');
   namePlayerOne.innerHTML = namePlayer;
+}
+
+function removeStyleRoundWinner(){
+  spanPlayerOnePoint.classList.remove('round-winner');//remove classe do perdedor da rodada
+  spanPlayerPcPoint.classList.remove('round-winner');//remove classe do perdedor da rodada
 }
 
 function addScore(scorePlayer){//add pontos
@@ -61,6 +67,7 @@ function addScore(scorePlayer){//add pontos
 
 function verifyWinner(){ // verifica quem canhou.
   if (playerOptOne == playerPcOpt) {
+   removeStyleRoundWinner();
     //alert('empate')
   }
 
