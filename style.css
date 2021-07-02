@@ -65,15 +65,28 @@ main {
 }
 .points {
   color: #f5e4ac;
-  font-size: 64px;
-  height: 76px;
-  text-align: center;
+  font-size: 32px;
+  height: 64px;
+  width: 64px;
+}
+
+.round-winner {
+  border: 2px solid #60b99b;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05); /*efeito de transparencia*/
+  backdrop-filter: blur(15px); /*efeito de desfoque*/
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.4);
 }
 
 .btn {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+}
+.btn button[name="addName"] {
+  background-color: #60b99b;
 }
 .btn button {
   background-color: #bb3c3d;
@@ -85,4 +98,6 @@ main {
   border: 0;
   border-radius: 8px;
   padding: 0 16px;
+  margin-right: 16px;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.4);
 }

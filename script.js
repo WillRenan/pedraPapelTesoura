@@ -32,14 +32,28 @@ function resetOpacityPlayer(element){ // resetar opacidade das opções n escolh
   }
 }
 
-function addScore(scorePlayer){
+function addNamePlayerOne(){ //adicionando nome do player 1
+  let namePlayer = prompt('Digite seu nome.');
+  let namePlayerOne =  document.querySelector('.player-options p');
+  namePlayerOne.innerHTML = namePlayer;
+}
+
+function addScore(scorePlayer){//add pontos
   if (scorePlayer == 1) {
-    playerOnePoints +=1;
-    spanPlayerOnePoint.innerHTML = playerOnePoints;
+    playerOnePoints +=1;//somando pontos
+    spanPlayerOnePoint.innerHTML = playerOnePoints; //add pontos
+
+    spanPlayerOnePoint.classList.add('round-winner');//add classe do ganhador da rodada
+    spanPlayerPcPoint.classList.remove('round-winner');//remove classe do perdedor da rodada
+
+
     return;
   }else if (scorePlayer == 0) {
-    playerPcPoints +=1;
-      spanPlayerPcPoint.innerHTML = playerPcPoints;
+    playerPcPoints +=1;//somando pontos
+    spanPlayerPcPoint.innerHTML = playerPcPoints;//add pontos
+
+    spanPlayerPcPoint.classList.add('round-winner');//add classe do ganhador da rodada
+    spanPlayerOnePoint.classList.remove('round-winner');//remove classe do perdedor da rodada
   }
 
 }
